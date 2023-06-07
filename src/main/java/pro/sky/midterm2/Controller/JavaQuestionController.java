@@ -28,7 +28,7 @@ public class JavaQuestionController {
     }
 
     @GetMapping(path = "/remove")
-    public Question removeQuestion(String question) {
+    public Question removeQuestion(Question question) {
         return service.remove(question);
     }
 }

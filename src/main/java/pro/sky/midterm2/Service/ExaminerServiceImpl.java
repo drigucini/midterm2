@@ -16,7 +16,7 @@ public class ExaminerServiceImpl implements ExaminerService {
 
     public Collection<Question> getQuestions(int amount) {
         Collection<Question> questionsPull = new HashSet<>();
-        questionService.getRandomQuestions();
+        questionService.getRandomQuestion();
         return null;
     }
 }

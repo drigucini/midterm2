@@ -11,25 +11,36 @@ import java.util.Set;
 public class JavaQuestionService implements QuestionService {
     Set<Question> questions;
     public Question add(String question, String answer) {
-        return null;
+        Question questionToAdd = new Question(question, answer);
+        questions.add(questionToAdd);
+        return questionToAdd;
     }
 
-    public Question add(String question) {
-        return null;
+    public Question add(Question question) {
+        questions.add(question);
+        return question;
     }
 
-    public Question remove(String question) {
-        return null;
+    public Question remove(Question question) {
+        questions.remove(question);
+        return question;
     }
 
     public Collection<Question> getAll() {
-        return null;
+        return questions;
     }
 
-    public Question getRandomQuestions() {
-        int number = 0;
-        int random = new Random().nextInt(number);
+    public Question getRandomQuestion() {
+        int item = new Random().nextInt(questions.size());
+        int i = 0;
+        for (Question question : questions) {
+            if(i == item){
+                return question;
+            }
+            i++;
+        }
         return null;
+
     }
 
 }
