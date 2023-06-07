@@ -1,7 +1,11 @@
 package pro.sky.midterm2;
 
+import org.springframework.stereotype.Repository;
+import org.springframework.web.context.annotation.SessionScope;
+
 import java.util.Objects;
 
+@Repository
 public class Question {
     private String question;
     private String answer;

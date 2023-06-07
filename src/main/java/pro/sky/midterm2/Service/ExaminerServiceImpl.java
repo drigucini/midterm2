@@ -3,6 +3,7 @@ package pro.sky.midterm2.Service;
 import pro.sky.midterm2.Question;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Random;
 
 public class ExaminerServiceImpl implements ExaminerService {
@@ -14,6 +15,8 @@ public class ExaminerServiceImpl implements ExaminerService {
     }
 
     public Collection<Question> getQuestions(int amount) {
+        Collection<Question> questionsPull = new HashSet<>();
+        questionService.getRandomQuestions();
         return null;
     }
 }
