@@ -5,6 +5,7 @@ import pro.sky.midterm2.Question;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class ExaminerServiceImpl implements ExaminerService {
     Random random;
@@ -15,8 +16,13 @@ public class ExaminerServiceImpl implements ExaminerService {
     }
 
     public Collection<Question> getQuestions(int amount) {
-        Collection<Question> questionsPull = new HashSet<>();
-        questionService.getRandomQuestion();
-        return null;
+        Set<Question> questionsPull = new HashSet<>();
+
+        while (questionsPull.size() < amount) {
+            Question randomQuestion = questionService.getRandomQuestion();
+            questionsPull.add(randomQuestion);
+        }
+
+        return questionsPull;
     }
 }

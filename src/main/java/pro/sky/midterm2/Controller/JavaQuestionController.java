@@ -2,6 +2,7 @@ package pro.sky.midterm2.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pro.sky.midterm2.Question;
 import pro.sky.midterm2.Service.QuestionService;
@@ -18,17 +19,17 @@ public class JavaQuestionController {
     }
 
     @GetMapping(path = "/add")
-    public Question addQuestion(String question, String answer) {
+    public Question addQuestion(@RequestParam String question, @RequestParam String answer) {
         return service.add(question, answer);
     }
 
-    @GetMapping(path = "")
+    @GetMapping
     public Collection<Question> getQuestions() {
         return service.getAll();
     }
 
     @GetMapping(path = "/remove")
-    public Question removeQuestion(Question question) {
+    public Question removeQuestion(@RequestParam Question question) {
         return service.remove(question);
     }
 }
