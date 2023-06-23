@@ -1,7 +1,4 @@
-package pro.sky.midterm2;
-
-import org.springframework.stereotype.Repository;
-import org.springframework.web.context.annotation.SessionScope;
+package pro.sky.midterm2.Controller;
 
 import java.util.Objects;
 

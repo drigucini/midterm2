@@ -1,6 +1,6 @@
-package pro.sky.midterm2.Service;
+package pro.sky.midterm2.Controller;
 
-import pro.sky.midterm2.Question;
+import pro.sky.midterm2.Controller.Question;
 
 import java.util.Collection;
 

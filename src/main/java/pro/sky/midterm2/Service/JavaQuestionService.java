@@ -1,13 +1,23 @@
 package pro.sky.midterm2.Service;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
-import pro.sky.midterm2.Question;
+import pro.sky.midterm2.Controller.Question;
 
 import java.util.*;
 
 @Service
 public class JavaQuestionService implements QuestionService {
     Set<Question> questions = new HashSet<>();
+
+    @PostConstruct
+    public void initQuestions() {
+        questions.add(new Question("a?", "b"));
+        questions.add(new Question("you?", "me"));
+        questions.add(new Question("wefs?", "asdx"));
+        questions.add(new Question("what?", "byes"));
+        questions.add(new Question("how?", "knowhow"));
+    }
     public Question add(String question, String answer) {
         Question questionToAdd = new Question(question, answer);
         questions.add(questionToAdd);
