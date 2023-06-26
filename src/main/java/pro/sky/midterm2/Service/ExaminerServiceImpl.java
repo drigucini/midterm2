@@ -1,13 +1,16 @@
 package pro.sky.midterm2.Service;
 
+import org.springframework.stereotype.Service;
 import pro.sky.midterm2.Controller.ExaminerService;
 import pro.sky.midterm2.Controller.Question;
+import pro.sky.midterm2.exception.NotEnoughQuestionsInStorageException;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+@Service
 public class ExaminerServiceImpl implements ExaminerService {
     Random random;
     QuestionService questionService;
@@ -17,6 +20,11 @@ public class ExaminerServiceImpl implements ExaminerService {
     }
 
     public Collection<Question> getQuestions(int amount) {
+        int size = questionService.getAll().size();
+        if (amount > size) {
+            throw new NotEnoughQuestionsInStorageException();
+        }
+
         Set<Question> questionsPull = new HashSet<>();
 
         while (questionsPull.size() < amount) {
