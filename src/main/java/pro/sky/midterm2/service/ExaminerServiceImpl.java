@@ -1,8 +1,8 @@
-package pro.sky.midterm2.Service;
+package pro.sky.midterm2.service;
 
 import org.springframework.stereotype.Service;
-import pro.sky.midterm2.Controller.ExaminerService;
-import pro.sky.midterm2.Controller.Question;
+import pro.sky.midterm2.controller.ExaminerService;
+import pro.sky.midterm2.controller.Question;
 import pro.sky.midterm2.exception.NotEnoughQuestionsInStorageException;
 
 import java.util.Collection;

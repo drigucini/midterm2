@@ -1,8 +1,8 @@
-package pro.sky.midterm2.Service;
+package pro.sky.midterm2.service;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
-import pro.sky.midterm2.Controller.Question;
+import pro.sky.midterm2.controller.Question;
 
 import java.util.*;
 

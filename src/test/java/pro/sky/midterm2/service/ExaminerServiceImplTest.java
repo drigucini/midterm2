@@ -1,4 +1,4 @@
-package pro.sky.midterm2.Service;
+package pro.sky.midterm2.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -6,8 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import pro.sky.midterm2.Controller.ExaminerService;
-import pro.sky.midterm2.Controller.Question;
+import pro.sky.midterm2.controller.Question;
 
 import java.util.*;
 
@@ -35,7 +34,15 @@ public class ExaminerServiceImplTest {
         List<Question> questionsList = new ArrayList<>(questions);
 
         given(questionService.getAll()).willReturn(questions);
-        given(questionService.getRandomQuestion()).willReturn(questionsList.get(0), questionsList.get(1), questionsList.get(2));
+        given(questionService.getRandomQuestion()).willReturn(
+                questionsList.get(0),
+                questionsList.get(0),
+                questionsList.get(0),
+                questionsList.get(1),
+                questionsList.get(1),
+                questionsList.get(2),
+                questionsList.get(2)
+        );
 
 
         //when

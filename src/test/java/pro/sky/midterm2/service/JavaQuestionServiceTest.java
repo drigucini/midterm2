@@ -1,8 +1,8 @@
-package pro.sky.midterm2.Service;
+package pro.sky.midterm2.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import pro.sky.midterm2.Controller.Question;
+import pro.sky.midterm2.controller.Question;
 
 import java.util.Collection;
 

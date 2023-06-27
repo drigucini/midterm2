@@ -1,4 +1,4 @@
-package pro.sky.midterm2.Controller;
+package pro.sky.midterm2.controller;
 
 import java.util.Objects;
 
